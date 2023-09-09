@@ -9,8 +9,6 @@ import { Content } from "./components/Content"
 function App() {
   const { ordensCompraMonitoradas } = useContext(OrdensCompraMonitoradasContext)
 
-  console.log(ordensCompraMonitoradas);
-
   return (
     <div>
       <Container>
@@ -22,7 +20,6 @@ function App() {
                 <Order key={i} order={order} id={i} />
               )
             })}
-
           </Orders>
         </Content>
       </Container>

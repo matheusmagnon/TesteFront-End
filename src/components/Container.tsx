@@ -6,7 +6,7 @@ interface ContainerProps {
 
 export function Container({ children }: ContainerProps) {
     return (
-        <div className="w-full flex flex-col items-center bg-gray-900 min-h-screen font-satoshiRegular text-gray-50">
+        <div className="w-full flex flex-col items-center bg-white min-h-screen font-satoshiRegular">
             {children}
         </div>
     )

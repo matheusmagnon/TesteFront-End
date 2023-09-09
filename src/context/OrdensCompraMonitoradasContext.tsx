@@ -2,6 +2,7 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 import { api } from "../lib/axios";
 
 export interface OrdenCompraMonitorada {
+    id: number
     propriedade?: {
         idPropriedade: number
         nomePropriedade: string;
@@ -21,11 +22,13 @@ export interface OrdenCompraMonitorada {
     },
     vinculo?: {
         tipoVinculoProdutor: string
-    }
+    },
+    EstaBloqueado?: boolean
 }
 
 interface OrdensCompraMonitoradasContextType {
     ordensCompraMonitoradas: OrdenCompraMonitorada[];
+    signalBuy: (order: OrdenCompraMonitorada) => void;
 }
 
 interface OrdensCompraMonitoradasProviderProps {
@@ -46,8 +49,16 @@ export function OrdensCompraMonitoradasProvider({ children }: OrdensCompraMonito
         fetchOrders();
     }, []);
 
+    const signalBuy = (order: OrdenCompraMonitorada) => {
+        console.log(order.id);
+
+        api.patch(`/orders/${order.id}`, {
+            "EstaBloqueado": true
+        }).then(fetchOrders)
+    }
+
     return (
-        <OrdensCompraMonitoradasContext.Provider value={{ ordensCompraMonitoradas }}>
+        <OrdensCompraMonitoradasContext.Provider value={{ ordensCompraMonitoradas, signalBuy }}>
             {children}
         </OrdensCompraMonitoradasContext.Provider>
     )

@@ -1,70 +1,76 @@
 {
   "orders": [
     {
+      "id": 1,
       "propriedade": {
         "idPropriedade": 1,
         "nomePropriedade": "Fazenda Nacional",
-        "numeroCadastroRural": 2323,
-        "tipoPropriedade": "Rural"
+        "numeroCadastroRural": 1867,
+        "tipoPropriedade": "latifúndio"
       },
       "produtor": {
-        "cpfProdutor": "83832926240",
+        "cpfProdutor": "111.222.333-01",
         "idProdutor": 23,
-        "nomeProdutor": "Luiz Carlos"
+        "nomeProdutor": "Fugêncio"
       },
       "monitoramento": {
-        "analista": "Matheus Analista",
+        "analista": "Maria Feitosa",
         "dataMonitoramento": "29/08/2023",
-        "parecerAnalise": "Tudo certo",
-        "resultado": "Passou"
+        "parecerAnalise": "A localização e composição da propriedade estão de acordo com a legislação vigente",
+        "resultado": "Aprovada"
       },
       "vinculo": {
         "tipoVinculoProdutor": "Proprietório"
-      }
+      },
+      "EstaBloqueado": true
     },
     {
+      "id": 2,
       "propriedade": {
-        "idPropriedade": 1,
-        "nomePropriedade": "Fazenda Nacional",
-        "numeroCadastroRural": 2323,
-        "tipoPropriedade": "Rural"
+        "idPropriedade": 17,
+        "nomePropriedade": "Fazenda da Conciliação ",
+        "numeroCadastroRural": 1313,
+        "tipoPropriedade": "familar"
       },
       "produtor": {
-        "cpfProdutor": "83832926240",
-        "idProdutor": 23,
+        "cpfProdutor": "134.191.719-45",
+        "idProdutor": 25,
         "nomeProdutor": "Luiz Carlos"
       },
       "monitoramento": {
-        "analista": "Matheus Analista",
-        "dataMonitoramento": "29/08/2023",
-        "parecerAnalise": "Tudo certo",
-        "resultado": "Passou"
+        "analista": "João Carlos",
+        "dataMonitoramento": "12/07/2023",
+        "parecerAnalise": "A localização e composição da propriedade estão de acordo com a legislação vigente",
+        "resultado": "Aprovada"
       },
       "vinculo": {
-        "tipoVinculoProdutor": "Proprietório"
-      }
+        "tipoVinculoProdutor": "Gestor"
+      },
+      "EstaBloqueado": true
     },
     {
+      "id": 3,
       "propriedade": {
-        "idPropriedade": 1,
-        "nomePropriedade": "Fazenda Nacional",
-        "numeroCadastroRural": 2323,
-        "tipoPropriedade": "Rural"
+        "idPropriedade": 87,
+        "nomePropriedade": "Fazenda Riacho das águas",
+        "numeroCadastroRural": 5656,
+        "tipoPropriedade": "minifúndio"
       },
       "produtor": {
-        "cpfProdutor": "83832926240",
+        "cpfProdutor": "838.333.262-42",
         "idProdutor": 23,
-        "nomeProdutor": "Luiz Carlos"
+        "nomeProdutor": "Luiz Gama"
       },
       "monitoramento": {
-        "analista": "Matheus Analista",
+        "analista": "Matheus Magno",
         "dataMonitoramento": "29/08/2023",
-        "parecerAnalise": "Tudo certo",
-        "resultado": "Passou"
+        "parecerAnalise": "A localização e composição da propriedade estão de acordo com a legislação vigente",
+        "resultado": "Aprovado"
       },
       "vinculo": {
         "tipoVinculoProdutor": "Proprietório"
-      }
+      },
+      "EstaBloqueado": true
     }
   ]
 }
