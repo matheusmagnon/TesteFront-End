@@ -13,7 +13,7 @@ export function Button({ orden, children }: ButtonProps) {
     return (
         <Dialog.Root>
             <Dialog.Trigger type='button' className=" text-gray-50 
-        flex lg:gap-1 items-center text-base border-2 border-blue-900 rounded-lg p-1 h-12 bg-blue-600 hover:text-gray-50 hover:bg-blue-700" >
+        flex lg:gap-1 items-center text-base border-2 border-blue-900 rounded-lg p-1  h-8 bg-blue-600 hover:text-gray-50 hover:bg-blue-700" >
                 <Plus size={20} weight="bold" />
                 {children}
             </Dialog.Trigger>

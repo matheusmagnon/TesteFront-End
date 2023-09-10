@@ -5,8 +5,6 @@ import { Field } from "./components/Field";
 import { FieldContainer } from "./components/FieldContainer";
 import { Register } from "./components/Register";
 
-// import { SeeMoreButton } from "./SeeMoreButton";
-
 interface OrderProps {
     order: OrdenCompraMonitorada;
 }
@@ -26,7 +24,7 @@ export function Order({ order }: OrderProps) {
                         </FieldContainer>
                         {order.EstaBloqueado &&
                             <span className="text-red-700 whitespace-nowrap">
-                                Está Ordem já comercializada
+                                Ordem já comercializada
                             </span>}
                     </h2>
                     <Button orden={order} >Ver detalhes</Button>

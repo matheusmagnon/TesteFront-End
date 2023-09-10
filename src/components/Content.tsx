@@ -6,9 +6,9 @@ interface ContentProps {
 
 export function Content({ children }: ContentProps) {
     return (
-        <div className="flex flex-col lg:w-7/12 lg:p-0 p-2 mb-20  ">
+        <main className="flex flex-col lg:w-7/12 lg:p-0 p-2 mb-20  ">
             {children}
-        </div>
+        </main>
 
     )
 }

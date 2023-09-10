@@ -1,27 +1,72 @@
-# React + TypeScript + Vite
+# Teste Front end NicePlanet (Aplicação que exibe ordens de compra monitoradas)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Capa
 
-Currently, two official plugins are available:
+<img src="./Cover.JPG" /> <br/> <br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Design da aplicação
 
-## Expanding the ESLint configuration
+- Clique [aqui](https://yannagoisconfeitaria.netlify.app/) para acessar a aplicação em produção ;)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Clique [aqui](https://www.figma.com/file/CNZBZZ2sJhnC1vlCuyGkg8/Pedido-Bent%C3%B4-Cake?node-id=2%3A2) para acessar o layout no Figma(foi alterado durante o projeto)
 
-- Configure the top-level `parserOptions` property like this:
+## Funcionalidades da aplicação
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- Colher informações do cliente(nome e telefone) e informações referente ao pedido (frase, cor da frase, desenho, cor do bolo, sabor e etc...)
+- Mostrar que o pedido foi confirmado com suacesso (esse modulo será refatorado)
+- Enviar informações tratadas para o trello (será que configurar as id(quadro,listas,api, token...) do trello na aplicação Sales Orders For Trello)
+
+## Tecnologias utilizadas
+
+- Vite
+- React
+- Typescript
+- Styled components
+- React hook form
+- Moment
+- Axios
+- uuid
+- yup
+- Zod
+- Phosphor react
+- Dotenv
+
+## Como executar a aplicação
+
+### Instalação
+
+1. Clone o repositório
+
+```bash
+git clone https://github.com/Magon0/SalesOrdesForTrello
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Acesse a pasta do projeto
+
+```bash
+cd SalesOrdesForTrello
+```
+
+3. Instale as dependências necessárias
+
+```bash
+npm install
+```
+
+4. Execute o projeto
+
+```bash
+npm run dev
+```
+
+### Configuração do trello
+
+Existe um quadro no trelo que qualquer um pode acessar e testar a aplicação, para fazer uso basta seguir os passos a seguir:
+
+1. É nessario criar um arquivo .env na pasta raiz do projeto, neste arquivo terá as seguintes variaveis:
+
+```bash
+VITE_API_KEY=
+VITE_TOKEN=
+VITE_ID_BOARD=
+```

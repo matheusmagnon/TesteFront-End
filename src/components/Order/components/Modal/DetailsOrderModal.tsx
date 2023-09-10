@@ -10,7 +10,9 @@ interface DetailsOrderProps {
 }
 export function DetailsOrderModal({ order }: DetailsOrderProps) {
     const { signalBuy } = useContext(OrdensCompraMonitoradasContext)
-    const handleOrder = () => signalBuy(order!);
+    const handleOrder = () => {
+        !order?.EstaBloqueado ? signalBuy(order!) : window.alert("Orderm já tem comercialização")
+    }
 
     const buttonStyle = "text-gray-50 flex gap-1 items-center text-base border-2 border-blue-900 rounded-lg p-1 bg-blue-600 hover:text-gray-50 hover:bg-blue-700"
 

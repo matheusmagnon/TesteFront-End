@@ -50,8 +50,6 @@ export function OrdensCompraMonitoradasProvider({ children }: OrdensCompraMonito
     }, []);
 
     const signalBuy = (order: OrdenCompraMonitorada) => {
-        console.log(order.id);
-
         api.patch(`/orders/${order.id}`, {
             "EstaBloqueado": true
         }).then(fetchOrders)
