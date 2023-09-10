@@ -67,10 +67,8 @@ export function DetailsOrderModal({ order }: DetailsOrderProps) {
                             !order?.EstaBloqueado ? buttonStyle : 'cursor-not-allowed bg-opacity-70 font-bold ' + buttonStyle}>
                             {!order?.EstaBloqueado ? "Sinalizar compra" : "* Ordem comercializada"}
                         </button>
-                        <Dialog.Close>
-                            <button className='text-gray-50 flex gap-1 items-center text-base border-2 border-yellow-900 rounded-lg p-1 bg-yellow-600 hover:text-gray-50 hover:bg-yellow-700'>
-                                Voltar
-                            </button>
+                        <Dialog.Close className='text-gray-50 flex gap-1 items-center text-base border-2 border-yellow-900 rounded-lg p-1 bg-yellow-600 hover:text-gray-50 hover:bg-yellow-700'>
+                            Voltar
                         </Dialog.Close>
                     </div>
                 </div>
