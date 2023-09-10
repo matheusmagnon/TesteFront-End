@@ -1,10 +1,9 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { XCircle } from 'phosphor-react';
 import { useContext } from 'react'
-import { OrdenCompraMonitorada, OrdensCompraMonitoradasContext } from '../../../context/OrdensCompraMonitoradasContext';
+import { OrdenCompraMonitorada, OrdensCompraMonitoradasContext } from '../../../../context/OrdensCompraMonitoradasContext';
 import { Register } from '../Register';
 import { Field } from '../Field';
-import { Button } from '../Button'
 
 interface DetailsOrderProps {
     order?: OrdenCompraMonitorada;
@@ -13,13 +12,12 @@ export function DetailsOrderModal({ order }: DetailsOrderProps) {
     const { signalBuy } = useContext(OrdensCompraMonitoradasContext)
     const handleOrder = () => signalBuy(order!);
 
-    // order?.EstaDisponivelParaCompra = 
     const buttonStyle = "text-gray-50 flex gap-1 items-center text-base border-2 border-blue-900 rounded-lg p-1 bg-blue-600 hover:text-gray-50 hover:bg-blue-700"
 
     return (
         <Dialog.Portal className="align-middle">
             <Dialog.Overlay className="fixed inset-0 bg-black/40" />
-            <Dialog.Content className="fixed w-96 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-md bg-white p-4 shadow border-solid border-2 border-green-700 rounded-xl">
+            <Dialog.Content className="fixed lg:w-96 w-11/12 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 rounded-xl bg-white p-4 shadow border-solid border-2 border-green-700 ">
                 <div className='flex justify-between items-center pb-4'>
                     <Dialog.Title className="text-xl text-gray-900 font-bold">
                         Detalhes da Ordem </Dialog.Title>

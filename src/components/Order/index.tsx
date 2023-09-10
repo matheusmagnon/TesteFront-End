@@ -1,8 +1,9 @@
 // import { Trash } from "phosphor-react";
 import { OrdenCompraMonitorada } from "../../context/OrdensCompraMonitoradasContext";
-import { Button } from "./Button";
-import { Field } from "./Field";
-import { Register } from "./Register";
+import { Button } from "./components/Button";
+import { Field } from "./components/Field";
+import { FieldContainer } from "./components/FieldContainer";
+import { Register } from "./components/Register";
 
 // import { SeeMoreButton } from "./SeeMoreButton";
 
@@ -17,11 +18,16 @@ export function Order({ order }: OrderProps) {
             <div className="flex flex-col overflow-x-auto gap-y-2 w-full">
                 <div className="flex justify-between">
                     <h2 className="font-bold pb-2">
-                        <span>N° Cadastro Rural: </span>
-                        <Field>
-                            {`${order.propriedade?.numeroCadastroRural}`}
-                        </Field>
-                        {order.EstaBloqueado && <span className="text-red-700"> Está Ordem já foi comercializada</span>}
+                        <FieldContainer>
+                            <span>N° Cadastro Rural: </span>
+                            <Field>
+                                {`${order.propriedade?.numeroCadastroRural}`}
+                            </Field>
+                        </FieldContainer>
+                        {order.EstaBloqueado &&
+                            <span className="text-red-700 whitespace-nowrap">
+                                Está Ordem já comercializada
+                            </span>}
                     </h2>
                     <Button orden={order} >Ver detalhes</Button>
                 </div>
@@ -36,10 +42,12 @@ export function Order({ order }: OrderProps) {
                     <Field>
                         {`${order.produtor?.nomeProdutor}`}
                     </Field>
-                    <span>CPF:</span>
-                    <Field>
-                        {`${order.produtor?.cpfProdutor}`}
-                    </Field>
+                    <FieldContainer>
+                        <span>CPF:</span>
+                        <Field>
+                            {`${order.produtor?.cpfProdutor}`}
+                        </Field>
+                    </FieldContainer>
                 </Register>
                 <Register>
                     <span>
@@ -48,14 +56,18 @@ export function Order({ order }: OrderProps) {
                     <Field>
                         {`${order.monitoramento.dataMonitoramento}`}
                     </Field>
-                    <span>Analista: </span>
-                    <Field>
-                        {`${order.monitoramento.analista}`}
-                    </Field>
-                    <span>Resultado:</span>
-                    <Field>
-                        {`${order.monitoramento.resultado}`}
-                    </Field>
+                    <FieldContainer>
+                        <span>Analista: </span>
+                        <Field>
+                            {`${order.monitoramento.analista}`}
+                        </Field>
+                    </FieldContainer>
+                    <FieldContainer>
+                        <span>Resultado:</span>
+                        <Field>
+                            {`${order.monitoramento.resultado}`}
+                        </Field>
+                    </FieldContainer>
                 </Register >
             </div>
         </div>
