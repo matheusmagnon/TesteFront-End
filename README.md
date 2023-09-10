@@ -4,32 +4,23 @@
 
 <img src="./Cover.JPG" /> <br/> <br/>
 
-## Design da aplicação
-
-- Clique [aqui](https://yannagoisconfeitaria.netlify.app/) para acessar a aplicação em produção ;)
-
-- Clique [aqui](https://www.figma.com/file/CNZBZZ2sJhnC1vlCuyGkg8/Pedido-Bent%C3%B4-Cake?node-id=2%3A2) para acessar o layout no Figma(foi alterado durante o projeto)
-
 ## Funcionalidades da aplicação
 
-- Colher informações do cliente(nome e telefone) e informações referente ao pedido (frase, cor da frase, desenho, cor do bolo, sabor e etc...)
-- Mostrar que o pedido foi confirmado com suacesso (esse modulo será refatorado)
-- Enviar informações tratadas para o trello (será que configurar as id(quadro,listas,api, token...) do trello na aplicação Sales Orders For Trello)
+- Exibir as ordens de compras monitoradas.
+- Sinalizar ordem como comercializada.
 
 ## Tecnologias utilizadas
 
 - Vite
 - React
 - Typescript
-- Styled components
-- React hook form
-- Moment
+- Tailwind CSS
 - Axios
-- uuid
-- yup
-- Zod
+- Eslint
+- Prettier
+- Concurrently
 - Phosphor react
-- Dotenv
+- Json-server
 
 ## Como executar a aplicação
 
@@ -38,13 +29,13 @@
 1. Clone o repositório
 
 ```bash
-git clone https://github.com/Magon0/SalesOrdesForTrello
+git clone https://github.com/matheusmagnon/TesteFront-End
 ```
 
 2. Acesse a pasta do projeto
 
 ```bash
-cd SalesOrdesForTrello
+cd TesteFront-End
 ```
 
 3. Instale as dependências necessárias
@@ -55,18 +46,8 @@ npm install
 
 4. Execute o projeto
 
+- Existe um "back-end" ficticio, os dados ficam no arquivo server.json
+
 ```bash
 npm run dev
-```
-
-### Configuração do trello
-
-Existe um quadro no trelo que qualquer um pode acessar e testar a aplicação, para fazer uso basta seguir os passos a seguir:
-
-1. É nessario criar um arquivo .env na pasta raiz do projeto, neste arquivo terá as seguintes variaveis:
-
-```bash
-VITE_API_KEY=
-VITE_TOKEN=
-VITE_ID_BOARD=
 ```
