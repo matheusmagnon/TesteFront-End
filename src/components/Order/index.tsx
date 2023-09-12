@@ -27,7 +27,7 @@ export function Order({ order }: OrderProps) {
                                 Ordem já comercializada
                             </span>}
                     </h2>
-                    <Button orden={order} >Ver detalhes</Button>
+                    <Button orden={order} />
                 </div>
                 <Register>
                     <span>Nome da propriedade: </span>

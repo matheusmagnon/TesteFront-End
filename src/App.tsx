@@ -6,7 +6,7 @@ import { Orders } from "./components/Orders"
 import { Order } from "./components/Order"
 import { Content } from "./components/Content"
 
-function App() {
+export function App() {
   const { ordensCompraMonitoradas } = useContext(OrdensCompraMonitoradasContext)
 
   return (
@@ -17,7 +17,7 @@ function App() {
           <Orders >
             {ordensCompraMonitoradas.map((order, i) => {
               return (
-                <Order key={i} order={order} id={i} />
+                <Order key={i} order={order} />
               )
             })}
           </Orders>
