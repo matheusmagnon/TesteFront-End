@@ -46,8 +46,8 @@ npm install
 
 4. Execute o projeto
 
-- Existe um "back-end" ficticio que é executado ao executar esse comando, os dados ficam no arquivo src/server.json
-
 ```bash
 npm run dev
 ```
+
+- Existe um "back-end" ficticio que é iniciado ao executar esse último comando, os dados ficam no arquivo src/server.json, caso seja necessário alterar as dados deve-se parar a execução da aplicação (Ctrl + C), alterar as informações respeitando a estrutura dos arquivos e executar o comando novamente.
