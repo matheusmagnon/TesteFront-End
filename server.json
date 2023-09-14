@@ -22,7 +22,7 @@
       "vinculo": {
         "tipoVinculoProdutor": "Proprietório"
       },
-      "EstaBloqueado": true
+      "EstaBloqueado": false
     },
     {
       "id": 2,
@@ -46,7 +46,7 @@
       "vinculo": {
         "tipoVinculoProdutor": "Gestor"
       },
-      "EstaBloqueado": false
+      "EstaBloqueado": true
     },
     {
       "id": 3,
@@ -70,7 +70,7 @@
       "vinculo": {
         "tipoVinculoProdutor": "Proprietório"
       },
-      "EstaBloqueado": true
+      "EstaBloqueado": false
     }
   ]
 }
